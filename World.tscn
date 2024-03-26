@@ -491,8 +491,8 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 position = Vector2( -326, 323 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 520, 25 )
-scale = Vector2( 1.57979, 1.65046 )
+position = Vector2( 601, 31.5 )
+scale = Vector2( 2.03989, 1.6875 )
 texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 752, 432 )
@@ -517,7 +517,7 @@ position = Vector2( 487, -234 )
 position = Vector2( -375, 3 )
 
 [node name="BottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2( 644, 532 )
+position = Vector2( 792, 594 )
 
 [node name="YSort" type="YSort" parent="."]
 
