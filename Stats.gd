@@ -17,10 +17,6 @@ func set_health(value):
 	emit_signal("health_changed", health)
 	if health <= 0:
 		emit_signal("no_health")
-		#health = max_health
-		#get_tree().reload_current_scene()
-		#get_tree().change_scene("res://Menu/GameOver.tscn")
 
 func _ready():
-	request_ready()
 	self.health = max_health

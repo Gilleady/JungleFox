@@ -50,7 +50,7 @@ func _physics_process(delta):
 			
 		CHASE:
 			var player = playerDetectionZone.player
-			if player != null:
+			if player != null and player.visible != false:
 				accelerate_towards_point(player.global_position, delta)
 			else:
 				state = IDLE

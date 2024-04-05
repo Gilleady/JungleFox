@@ -19,12 +19,12 @@ var roll_vector = Vector2.DOWN
 var stats = PlayerStats
 
 onready var animationPlayer = $AnimationPlayer
-onready var animationPortal = $"/root/World/Portal/AnimationPortal"
 onready var animationTree = $AnimationTree
 onready var animationState = animationTree.get("parameters/playback")
 onready var swordHitbox = $HitboxPivot/SwordHitbox
 onready var hurtbox = $Hurtbox
 onready var blinkAnimationPlayer = $BlinkAnimationPlayer
+onready var animationPortal = $"/root/World/Portal/AnimationPortal"
 
 func _ready():
 	randomize()
@@ -96,20 +96,10 @@ func _on_Hurtbox_area_entered(area):
 	var playerHurtSound = PlayerHurtSound.instance()
 	get_tree().current_scene.add_child(playerHurtSound)
 	if stats.health <= 0:
-		queue_free()
-		#get_parent().get_parent().Portal.AnimationPortal.play("GameOver")
 		animationPortal.play("GameOver")
-		#get_tree().change_scene("res://Menu/GameOver.tscn")
-		#PlayerStats.health = PlayerStats.max_health
-		
-
 	
 func _on_Hurtbox_invincibility_started():
 	blinkAnimationPlayer.play("Start")
 
 func _on_Hurtbox_invincibility_ended():
 	blinkAnimationPlayer.play("Stop")
-
-
-func _on_World_ready():
-	request_ready()
