@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://World/Bush.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://World/Tree.png" type="Texture" id=14]
 [ext_resource path="res://World/Portal.gd" type="Script" id=15]
 [ext_resource path="res://World/DoorOpen.png" type="Texture" id=16]
+[ext_resource path="res://Music and Sounds/Background.wav" type="AudioStream" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
@@ -866,6 +867,10 @@ region_rect = Rect2( 0, 0, 16, 16 )
 visible = false
 position = Vector2( -1.30001e+06, 1.45e+06 )
 shape = SubResource( 64 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+autoplay = true
 
 [connection signal="body_entered" from="Portal" to="Portal" method="_on_Portal_body_entered"]
 [connection signal="animation_finished" from="Portal/AnimationPortal" to="Portal" method="_on_AnimationPlayer_animation_finished"]
