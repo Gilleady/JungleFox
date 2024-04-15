@@ -16,7 +16,7 @@
 [ext_resource path="res://World/Tree.png" type="Texture" id=14]
 [ext_resource path="res://World/Portal.gd" type="Script" id=15]
 [ext_resource path="res://World/DoorOpen.png" type="Texture" id=16]
-[ext_resource path="res://Music and Sounds/Background.wav" type="AudioStream" id=17]
+[ext_resource path="res://Music and Sounds/Background.mp3" type="AudioStream" id=17]
 
 [sub_resource type="TileSet" id=1]
 0/name = "DirtTileset.png 0"
