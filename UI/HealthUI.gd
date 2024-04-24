@@ -20,6 +20,7 @@ func set_max_hearts(value):
 func _ready():
 	self.max_hearts = PlayerStats.max_health
 	self.hearts = PlayerStats.health
+	$"/root/World/CanvasLayer/Label".text = "Kills: " + str(PlayerStats.kills)
 	# warning-ignore:return_value_discarded
 	PlayerStats.connect("health_changed", self, "set_hearts")
 	# warning-ignore:return_value_discarded

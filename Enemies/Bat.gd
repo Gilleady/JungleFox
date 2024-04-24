@@ -87,6 +87,12 @@ func _on_Stats_no_health():
 	var enemyDeathEffect = EnemyDeathEffect.instance()
 	get_parent().add_child(enemyDeathEffect)
 	enemyDeathEffect.global_position = global_position
+	PlayerStats.kills += 1
+	$"/root/World/CanvasLayer/Label".text = "Kills: " + str(PlayerStats.kills)
+	if (get_tree().current_scene.filename == "res://SecretRoom.tscn"):
+		PlayerStats.kills_secret_room += 1
+		if (PlayerStats.kills_secret_room == 8):
+			get_tree().change_scene("res://World.tscn")
 
 func _on_Hurtbox_invincibility_started():
 	animationPlayer.play("Start")

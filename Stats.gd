@@ -2,6 +2,8 @@ extends Node
 
 var max_health = 4 setget set_max_health
 var health = max_health setget set_health
+var kills
+var kills_secret_room
 
 signal no_health
 signal health_changed(value)
@@ -20,3 +22,5 @@ func set_health(value):
 
 func _ready():
 	self.health = max_health
+	self.kills = 0
+	self.kills_secret_room = 0
