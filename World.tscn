@@ -943,6 +943,7 @@ shape = SubResource( 64 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
+volume_db = -21.311
 autoplay = true
 
 [connection signal="body_entered" from="Portal" to="Portal" method="_on_Portal_body_entered"]
