@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GameWin.jpeg-b09cbcb129b38310977fa7c6fe4cff9e.stex"
+path="res://.import/GameWin.jpg-7e5b667c4a450c34d603facd7b0cce19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/GameWin.jpeg"
-dest_files=[ "res://.import/GameWin.jpeg-b09cbcb129b38310977fa7c6fe4cff9e.stex" ]
+source_file="res://Menu/GameWin.jpg"
+dest_files=[ "res://.import/GameWin.jpg-7e5b667c4a450c34d603facd7b0cce19.stex" ]
 
 [params]
 
