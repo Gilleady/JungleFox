@@ -25,6 +25,7 @@ onready var hurtbox = $Hurtbox
 onready var softCollision = $SoftCollision
 onready var wanderController = $WanderController
 onready var animationPlayer = $AnimationPlayer
+onready var animationSecretRoom = $"/root/World/Portal/AnimationPortal"
 
 func _ready():
 	state = pick_random_state([IDLE, WANDER])
@@ -92,7 +93,7 @@ func _on_Stats_no_health():
 	if (get_tree().current_scene.filename == "res://SecretRoom.tscn"):
 		PlayerStats.kills_secret_room += 1
 		if (PlayerStats.kills_secret_room == 8):
-			get_tree().change_scene("res://World.tscn")
+			animationSecretRoom.play("BackToWorld")
 
 func _on_Hurtbox_invincibility_started():
 	animationPlayer.play("Start")

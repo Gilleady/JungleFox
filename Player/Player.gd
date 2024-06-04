@@ -31,6 +31,11 @@ func _ready():
 	stats.connect("no_health", self, "queue_free")
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
+	if (PlayerStats.kills_secret_room == 8 and get_tree().current_scene.name == "World"):
+		get_node("/root/World/SecretRoom").set_deferred("visible",false)
+		get_node("/root/World/SecretRoom/CollisionShape2D").set_deferred("disabled",true)
+		global_position.y = 400
+		global_position.x = -100
 
 func _physics_process(delta):
 	match state:
